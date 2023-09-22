@@ -25,3 +25,6 @@ export const weatherReducer = (state=initialState,action)=>{
         }
     }
 }
+
+
+export default weatherReducer
