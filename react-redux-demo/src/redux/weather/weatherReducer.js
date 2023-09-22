@@ -16,13 +16,18 @@ export const weatherReducer = (state=initialState,action)=>{
         case FETCH_WEATHER_SUCCESS:return{
             ...state,
             loading:false,
-            weather:action.payload
+            weather:action.payload,
+            error:''
         };
         case FETCH_WEATHER_FAILURE:return{
             ...state,
             loading:false,
-            error:action.payload
-        }
+            error:action.payload,
+            weather:[]
+        };
+        default:return state
+
+
     }
 }
 
