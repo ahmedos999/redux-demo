@@ -4,13 +4,15 @@ import { fetchWeather } from '../redux'
 
 function WeatherContainer({weatherData,fetchWeather}) {
     useEffect(()=>{
+        console.log('fetching from container')
         fetchWeather()
     },[])
   return (
     <div>
         {weatherData.loading && <p>Loading for weather data</p>}
         {weatherData.error && <p>{weatherData.error}</p>}
-        {weatherData.weather && weatherData.weather.weather.map((weathera)=><p>weather main:{weathera.main} <br/> weather discription {weathera.description}</p>)}
+
+        {weatherData.weather.weather && weatherData.weather.weather.map((weathera)=><p>weather main:{weathera.main} <br/> weather discription {weathera.description}</p>)}
     </div>
   )
 }
