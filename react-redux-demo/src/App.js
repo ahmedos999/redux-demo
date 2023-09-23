@@ -1,6 +1,7 @@
 
 import './App.css';
-import WeatherContainer from './components/WeatherContainer';
+// import WeatherContainer from './components/WeatherContainer';
+import { Appwrite } from 'appwrite';
 // import CakeContainer from './components/CakeContainer';
 // import HookCakeContainer from './components/HookCakeContainer';
 // import IcecreamContainer from './components/IcecreamContainer';
@@ -10,8 +11,15 @@ import WeatherContainer from './components/WeatherContainer';
 
 import store from './redux/store'
 import { Provider } from 'react-redux';
+import Tasks from './components/AppwriteTest';
 
 function App() {
+  const appwrite = new Appwrite();
+
+appwrite
+  .setEndpoint('https://cloud.appwrite.io/v1') // Replace with your Appwrite server endpoint
+  .setProject('650f026a6ac5b8e7bd95') // Replace with your Appwrite project ID
+  // .setKey('your-api-key');
   return (
     <Provider store={store}>
     <div className="App">
@@ -22,7 +30,8 @@ function App() {
      <IcecreamContainer></IcecreamContainer>
      <NewCakeContainer></NewCakeContainer>
     <UserContainerNew></UserContainerNew> */}
-    <WeatherContainer></WeatherContainer>
+    {/* <WeatherContainer></WeatherContainer> */}
+    <Tasks></Tasks>
     </div>
     </Provider>
   );
