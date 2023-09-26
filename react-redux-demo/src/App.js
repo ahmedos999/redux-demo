@@ -14,10 +14,7 @@ import { Provider } from 'react-redux';
 
 
 function App() {
-  const client = new Client()
 
-
-  
   // Replace with your Appwrite project ID
   // .setKey('your-api-key');
   return (
