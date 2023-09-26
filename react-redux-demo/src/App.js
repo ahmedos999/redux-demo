@@ -15,8 +15,6 @@ import { Provider } from 'react-redux';
 
 function App() {
 
-  // Replace with your Appwrite project ID
-  // .setKey('your-api-key');
   return (
     <Provider store={store}>
     <div className="App">
@@ -27,7 +25,7 @@ function App() {
      <IcecreamContainer></IcecreamContainer>
      <NewCakeContainer></NewCakeContainer>
     <UserContainerNew></UserContainerNew> */}
-    {/* <WeatherContainer></WeatherContainer> */}
+    <WeatherContainer></WeatherContainer>
     </div>
     </Provider>
   );
